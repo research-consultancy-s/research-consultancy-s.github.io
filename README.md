@@ -17,58 +17,66 @@ Double-click `index.html`. That's it.
 To preview the way a real server will serve it:
 
 ```powershell
-cd C:\Users\USER-K\sobia-research-consulting
+cd C:\Users\USER-K\research-consultancy-s
 python -m http.server 8080
 ```
 
 Then open <http://localhost:8080>. Press `Ctrl+C` in the terminal to stop.
 
-## Publish on your own domain
+## Publish on GitHub Pages
 
-Everything below is done in a browser. No Git, no command line.
+The repository is already created and the first commit is already made. What is left is
+publishing it, which is all done with buttons in GitHub Desktop.
 
-### Step 1 — Buy the domain
+### Step 1 — Publish the repository
 
-Use **Cloudflare Registrar** (<https://dash.cloudflare.com>). It sells domains at cost with
-no markup and no renewal price jump, and because it also hosts the site, there are no DNS
-records to copy by hand. Namecheap and Porkbun work too, but add a manual DNS step.
+1. Open **GitHub Desktop** → **File → Add local repository**
+2. Choose `C:\Users\USER-K\research-consultancy-s` and click **Add repository**
+3. Click **Publish repository** (top bar)
+4. Leave the name as **`research-consultancy-s`** — this name becomes part of your web
+   address, so changing it changes the link
+5. **Untick "Keep this code private."** GitHub Pages will not serve a private repository
+   on the free plan
+6. Click **Publish repository**
 
-Expect about **$10–15 per year** for a `.com`.
+### Step 2 — Turn on Pages
 
-Check the name is free in the registrar's search box — that is the only definitive check.
+1. On github.com, open the `research-consultancy-s` repository
+2. **Settings → Pages**
+3. Under *Build and deployment*: **Source** = `Deploy from a branch`,
+   **Branch** = `main`, folder = `/ (root)`
+4. Click **Save**
 
-### Step 2 — Put the site online
+Wait two or three minutes, then reload the Settings → Pages screen. Your address appears
+at the top:
 
-In the same Cloudflare dashboard:
+```
+https://YOUR-USERNAME.github.io/research-consultancy-s/
+```
 
-1. **Compute (Workers & Pages) → Create → Pages → Upload assets**
-2. Project name: `research-consultancy-s`
-3. Drag **this whole folder** onto the upload box, then **Deploy site**
-
-The site is live within a minute at `research-consultancy-s.pages.dev`. That link already
-works and can be shared while the domain is being set up.
-
-### Step 3 — Attach the domain
-
-1. Open the Pages project → **Custom domains** → **Set up a custom domain**
-2. Type the domain you bought and confirm
-
-Because the domain is registered with Cloudflare, DNS is filled in automatically and HTTPS
-is issued for you. Allow a few minutes, occasionally up to a day.
+That link is public — anyone can open it, no account needed. HTTPS is automatic.
 
 ### Updating the site later
 
-Edit the files here, then go back to the Pages project → **Create new deployment** and drag
-the folder in again. The live site updates in under a minute.
+Edit the files here, then in GitHub Desktop: write a short summary, **Commit to main**,
+then **Push origin**. The live page updates within a minute or two.
 
-### If you registered the domain somewhere else
+### Adding your own domain later
 
-Add these records at your registrar, replacing `research-consultancy-s` with your project name:
+If you buy a domain (about $10–15/year — Cloudflare, Namecheap and Porkbun are all fine):
 
-| Type  | Name | Value |
-|-------|------|-------|
-| CNAME | @    | `research-consultancy-s.pages.dev` |
-| CNAME | www  | `research-consultancy-s.pages.dev` |
+1. **Settings → Pages → Custom domain**, enter the domain, **Save**
+2. At your registrar, add these DNS records:
+
+   | Type  | Name | Value |
+   |-------|------|-------|
+   | A     | @    | `185.199.108.153` |
+   | A     | @    | `185.199.109.153` |
+   | A     | @    | `185.199.110.153` |
+   | A     | @    | `185.199.111.153` |
+   | CNAME | www  | `YOUR-USERNAME.github.io` |
+
+3. Back in Settings → Pages, tick **Enforce HTTPS** once it becomes available.
 
 ## Where to edit the common things
 
