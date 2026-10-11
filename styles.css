@@ -12,6 +12,7 @@
   --dim:       #828f9e;
   --border:    #dde4ec;
   --border-2:  #c9d4e0;
+  --rule:      #a9b9cb;
   --accent:    #1f4e8c;
   --accent-ink:#163a69;
   --accent-bg: #eaf1fa;
@@ -41,6 +42,7 @@
     --dim:       #7b8898;
     --border:    #233040;
     --border-2:  #2f3f52;
+    --rule:      #41566e;
     --accent:    #6aa5e8;
     --accent-ink:#9cc4f0;
     --accent-bg: #15263c;
@@ -133,7 +135,7 @@ sub { font-size: .72em; }
   z-index: 100;
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: saturate(180%) blur(12px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--rule);
 }
 
 .header-inner {
@@ -260,7 +262,7 @@ sub { font-size: .72em; }
   background:
     radial-gradient(1100px 440px at 12% -10%, var(--accent-bg), transparent 70%),
     var(--bg);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--rule);
 }
 
 .hero-grid {
@@ -392,8 +394,8 @@ sub { font-size: .72em; }
 
 .section-alt {
   background: var(--surface);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
 }
 
 .section-head { max-width: 68ch; margin-bottom: clamp(32px, 4.5vw, 52px); }
@@ -759,7 +761,7 @@ sub { font-size: .72em; }
   background:
     radial-gradient(900px 400px at 85% 110%, var(--accent-bg), transparent 70%),
     var(--bg);
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--rule);
 }
 
 .contact-inner {
@@ -834,7 +836,7 @@ sub { font-size: .72em; }
 
 .site-footer {
   background: var(--surface-2);
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--rule);
   padding: 40px 0 calc(40px + env(safe-area-inset-bottom, 0px));
 }
 .footer-inner {
