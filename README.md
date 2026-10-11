@@ -1,6 +1,6 @@
-# Research Consultancy-S — website
+# ResearchMentor website
 
-Static one-page site for Research Consultancy-S, Dr. Sobia Ali Khan's paid remote research
+Static one-page site for ResearchMentor, Dr. Sobia Ali Khan's paid remote research
 collaboration and consulting practice. Plain HTML, CSS and JavaScript — no build step,
 no dependencies.
 
@@ -84,7 +84,7 @@ If you buy a domain (about $10–15/year — Cloudflare, Namecheap and Porkbun a
 |---|---|
 | Any price | `index.html`, in the `<!-- PRICING -->` section |
 | Your title or affiliation | `index.html`, hero section and About section |
-| Business name | `index.html` — search for `Research Consultancy-S` (appears 4 times) |
+| Business name | `index.html` search for `ResearchMentor` (appears 4 times) |
 | Email address | `index.html` — search for `sobiaali2338@gmail.com` (appears 4 times) |
 | Publication list | `index.html`, the `<ol class="pub-list">` block |
 | Accent colour | `styles.css`, the `--accent` variable near the top |
